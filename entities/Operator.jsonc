@@ -1,0 +1,63 @@
+{
+  "name": "Operator",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "username": {
+      "type": "string"
+    },
+    "pin": {
+      "type": "string",
+      "description": "4-6 digit PIN"
+    },
+    "terminal_id": {
+      "type": "string"
+    },
+    "commission_rate": {
+      "type": "number",
+      "default": 5
+    },
+    "credit_balance": {
+      "type": "number",
+      "default": 0
+    },
+    "loaded_total": {
+      "type": "number",
+      "default": 0
+    },
+    "total_volume": {
+      "type": "number",
+      "default": 0
+    },
+    "total_commission": {
+      "type": "number",
+      "default": 0
+    },
+    "total_bets_placed": {
+      "type": "number",
+      "default": 0
+    },
+    "total_payouts": {
+      "type": "number",
+      "default": 0
+    },
+    "pending_payout": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "terminal_id"
+  ]
+}

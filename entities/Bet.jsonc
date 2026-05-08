@@ -1,0 +1,71 @@
+{
+  "name": "Bet",
+  "type": "object",
+  "properties": {
+    "fight_id": {
+      "type": "string"
+    },
+    "fight_number": {
+      "type": "number"
+    },
+    "side": {
+      "type": "string",
+      "enum": [
+        "meron",
+        "wala",
+        "draw"
+      ]
+    },
+    "amount": {
+      "type": "number"
+    },
+    "bettor_name": {
+      "type": "string"
+    },
+    "ticket_number": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "won",
+        "lost",
+        "draw",
+        "cancelled",
+        "paid"
+      ],
+      "default": "active"
+    },
+    "payout": {
+      "type": "number",
+      "default": 0
+    },
+    "terminal_id": {
+      "type": "string"
+    },
+    "operator_id": {
+      "type": "string"
+    },
+    "claimed": {
+      "type": "boolean",
+      "default": false
+    },
+    "claimed_at": {
+      "type": "string",
+      "description": "ISO timestamp of claim"
+    },
+    "claimed_by": {
+      "type": "string",
+      "description": "Operator username who claimed"
+    },
+    "qr_code": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "fight_id",
+    "side",
+    "amount"
+  ]
+}

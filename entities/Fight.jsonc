@@ -1,0 +1,111 @@
+{
+  "name": "Fight",
+  "type": "object",
+  "properties": {
+    "fight_number": {
+      "type": "number"
+    },
+    "meron_name": {
+      "type": "string"
+    },
+    "wala_name": {
+      "type": "string"
+    },
+    "meron_weight": {
+      "type": "string"
+    },
+    "wala_weight": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "upcoming",
+        "open",
+        "last_call",
+        "closed",
+        "fight",
+        "finished",
+        "cancelled"
+      ],
+      "default": "upcoming"
+    },
+    "winner": {
+      "type": "string",
+      "enum": [
+        "meron",
+        "wala",
+        "draw",
+        "cancelled"
+      ]
+    },
+    "total_meron_bets": {
+      "type": "number",
+      "default": 0
+    },
+    "total_wala_bets": {
+      "type": "number",
+      "default": 0
+    },
+    "total_draw_bets": {
+      "type": "number",
+      "default": 0
+    },
+    "arena_id": {
+      "type": "string"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "odds_meron": {
+      "type": "number",
+      "default": 1,
+      "description": "Meron payout multiplier"
+    },
+    "odds_wala": {
+      "type": "number",
+      "default": 1,
+      "description": "Wala payout multiplier"
+    },
+    "odds_draw": {
+      "type": "number",
+      "default": 8,
+      "description": "Draw payout multiplier"
+    },
+    "bet_timer_seconds": {
+      "type": "number",
+      "default": 0,
+      "description": "0 = no timer"
+    },
+    "bet_timer_start": {
+      "type": "string",
+      "description": "ISO timestamp when timer started"
+    },
+    "meron_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "wala_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "bayong_jackpot": {
+      "type": "number",
+      "default": 100
+    },
+    "bayong_triggered": {
+      "type": "boolean",
+      "default": false
+    },
+    "archived": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "fight_number",
+    "meron_name",
+    "wala_name"
+  ]
+}

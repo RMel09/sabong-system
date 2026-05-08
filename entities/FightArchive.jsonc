@@ -1,0 +1,104 @@
+{
+  "name": "FightArchive",
+  "type": "object",
+  "properties": {
+    "fight_id": {
+      "type": "string"
+    },
+    "fight_number": {
+      "type": "number"
+    },
+    "event_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "meron_name": {
+      "type": "string"
+    },
+    "wala_name": {
+      "type": "string"
+    },
+    "meron_weight": {
+      "type": "string"
+    },
+    "wala_weight": {
+      "type": "string"
+    },
+    "winner": {
+      "type": "string",
+      "enum": [
+        "meron",
+        "wala",
+        "draw",
+        "cancelled"
+      ]
+    },
+    "total_meron_bets": {
+      "type": "number",
+      "default": 0
+    },
+    "total_wala_bets": {
+      "type": "number",
+      "default": 0
+    },
+    "total_draw_bets": {
+      "type": "number",
+      "default": 0
+    },
+    "total_pool": {
+      "type": "number",
+      "default": 0
+    },
+    "total_payout": {
+      "type": "number",
+      "default": 0
+    },
+    "house_cut": {
+      "type": "number",
+      "default": 0
+    },
+    "commission_rate": {
+      "type": "number",
+      "default": 10
+    },
+    "bayong_jackpot": {
+      "type": "number",
+      "default": 0
+    },
+    "bayong_triggered": {
+      "type": "boolean",
+      "default": false
+    },
+    "meron_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "wala_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "bet_count": {
+      "type": "number",
+      "default": 0
+    },
+    "odds_meron": {
+      "type": "number",
+      "default": 1
+    },
+    "odds_wala": {
+      "type": "number",
+      "default": 1
+    },
+    "odds_draw": {
+      "type": "number",
+      "default": 8
+    },
+    "tickets_snapshot": {
+      "type": "string",
+      "description": "JSON snapshot of all bets"
+    }
+  },
+  "required": [
+    "fight_number"
+  ]
+}

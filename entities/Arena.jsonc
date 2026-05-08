@@ -1,0 +1,25 @@
+{
+  "name": "Arena",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Arena name"
+    },
+    "location": {
+      "type": "string",
+      "description": "Arena location"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "closed"
+      ],
+      "default": "open"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}

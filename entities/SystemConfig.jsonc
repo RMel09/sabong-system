@@ -1,0 +1,21 @@
+{
+  "name": "SystemConfig",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string",
+      "description": "Config key"
+    },
+    "value": {
+      "type": "string",
+      "description": "Config value (JSON stringified for complex)"
+    },
+    "label": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "key",
+    "value"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "description": "Action type e.g. BET_PLACED, PAYOUT_CLAIMED, OPERATOR_LOGIN"
+    },
+    "description": {
+      "type": "string"
+    },
+    "operator_id": {
+      "type": "string"
+    },
+    "operator_name": {
+      "type": "string"
+    },
+    "terminal_id": {
+      "type": "string"
+    },
+    "fight_number": {
+      "type": "number"
+    },
+    "ticket_number": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "metadata": {
+      "type": "string",
+      "description": "JSON string of extra context"
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "info",
+        "warning",
+        "critical"
+      ],
+      "default": "info"
+    }
+  },
+  "required": [
+    "action"
+  ]
+}
